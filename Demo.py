@@ -2,3 +2,4 @@
 
 strA = "hello"
 print(strA)
+print("BBB")
