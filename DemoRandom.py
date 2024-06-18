@@ -29,3 +29,7 @@ if exists(name):
     print("파일크기:",getsize(name))
 else:
     print("파일 없음")
+
+
+lst = glob.glob(r"c:\work2\*.*")
+print(lst)
