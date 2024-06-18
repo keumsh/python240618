@@ -1,0 +1,76 @@
+#GPT를 이용하여 코드생성
+class Person:
+    def __init__(self, id, name):
+        self.id = id
+        self.name = name
+
+    def printInfo(self):
+        print(f"ID: {self.id}, Name: {self.name}")
+
+class Manager(Person):
+    def __init__(self, id, name, title):
+        super().__init__(id, name)
+        self.title = title
+
+    def printInfo(self):
+        super().printInfo()
+        print(f"Title: {self.title}")
+
+class Employee(Person):
+    def __init__(self, id, name, skill):
+        super().__init__(id, name)
+        self.skill = skill
+
+    def printInfo(self):
+        super().printInfo()
+        print(f"Skill: {self.skill}")
+
+# 테스트 코드
+def test_person_classes():
+    # 테스트 1: Person 객체 생성 및 정보 출력
+    person1 = Person(1, "Alice")
+    person1.printInfo()
+
+    # 테스트 2: Manager 객체 생성 및 정보 출력
+    manager1 = Manager(2, "Bob", "CTO")
+    manager1.printInfo()
+
+    # 테스트 3: Employee 객체 생성 및 정보 출력
+    employee1 = Employee(3, "Charlie", "Python")
+    employee1.printInfo()
+
+    # 테스트 4: 다른 Manager 객체 생성 및 정보 출력
+    manager2 = Manager(4, "David", "CFO")
+    manager2.printInfo()
+
+    # 테스트 5: 다른 Employee 객체 생성 및 정보 출력
+    employee2 = Employee(5, "Eve", "JavaScript")
+    employee2.printInfo()
+
+    # 테스트 6: Person의 ID 변경 후 출력
+    person1.id = 10
+    person1.printInfo()
+
+    # 테스트 7: Manager의 Title 변경 후 출력
+    manager1.title = "CEO"
+    manager1.printInfo()
+
+    # 테스트 8: Employee의 Skill 변경 후 출력
+    employee1.skill = "Java"
+    employee1.printInfo()
+
+    # 테스트 9: 여러 객체 생성 및 확인
+    persons = [Person(i, f"Person{i}") for i in range(6, 10)]
+    for person in persons:
+        person.printInfo()
+
+    # 테스트 10: Manager와 Employee 리스트 생성 및 정보 출력
+    managers = [Manager(i, f"Manager{i}", f"Title{i}") for i in range(10, 13)]
+    employees = [Employee(i, f"Employee{i}", f"Skill{i}") for i in range(13, 16)]
+    for manager in managers:
+        manager.printInfo()
+    for employee in employees:
+        employee.printInfo()
+
+# 테스트 실행
+test_person_classes()
