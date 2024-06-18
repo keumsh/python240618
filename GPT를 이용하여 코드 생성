@@ -1,4 +1,11 @@
 #GPT를 이용하여 코드생성
+#파이썬에서 Person클래스를 작성하는데 id, name멤버변수가 있고 이 내용을 출력하는
+#printInfo()메서드를 작성해줘. 
+#Person클래스를 상속받는 Manager클래스는 title변수가 추가되고,
+#Person클래스를 상속받는 Employee클래스는 skill변수가 추가되어야해. 
+#10개의 테스트 코드도 같이 작성해줘 
+#생성된 코드와 주석을 하나의 파일로 합쳐서 보여줘
+
 class Person:
     def __init__(self, id, name):
         self.id = id
