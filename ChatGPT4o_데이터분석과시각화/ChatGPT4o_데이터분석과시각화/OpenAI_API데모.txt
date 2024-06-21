@@ -56,7 +56,7 @@ response = openai.Image.create_edit(
 image_url = response["data"][0]["url"]
 print(image_url)
 
-
+==========================================
 
 image = open("image.png", "rb")
 
